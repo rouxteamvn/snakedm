@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Rắn online</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+	</head>
+<body>
+	<div id="content">
+		<div id="controls" class='clear'>
+			<label for="selectWallFrequency">Mật độ vật cản: </label>
+			<select id="selectWallFrequency">
+				<option value=".1">10%</option>
+				<option value=".2">20%</option>
+				<option value = ".3">30%</option>
+			</select>
+			<br />
+			<label for="selectGridSize">Kích thước ma trận: </label>
+			<select id="selectGridSize" name="selectGridSize">
+				<option value="20" selected="selected">20x20</option>
+				<option value="30">30x30</option>
+				<option value="40">40x40</option>
+			</select>
+			<br />
+			<input type="button" id="btnGenerate" value="Thay đổi map" />
+			<br/>
+			<span id="message">Nhấn vào vị trí của thức ăn để con rắn tìm đường ngắn nhất.</span>
+	    </div>
+		<div id = "score"></div>
+
+	    <div id="main">
+	    	<div id="search_grid"></div>
+	    </div>
+	</div>
+	<script type='text/javascript' src='jquery-1.7.1.min.js'></script>
+	<script type='text/javascript' src='../astar.js'></script>
+	<script type='text/javascript' src='demo.js'></script>
+</body>
+</html>
